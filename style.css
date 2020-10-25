@@ -3,32 +3,31 @@
 body {
   font-family: 'Spartan', sans-serif;
   font-size: 15px;
+  margin: 0;
+  padding: 0;
 }
-
 .container {
   width: 80%;
   height: auto;
   margin: 0 auto;
   margin-top: 150px;
 }
-
-.bottom-bg-desk {
+.bottom-bg-desk,
+.bottom-bg-mob {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-
-.top-bg-desk {
+.top-bg-desk,
+.top-bg-mob {
   position: absolute;
   top: 0;
   left: 0;
 }
-
 .section-one {
   display: flex;
   justify-content: space-between;
 }
-
 h1 {
   color: hsl(300, 43%, 22%);
   font-size: 46px;
@@ -36,29 +35,24 @@ h1 {
   line-height: 46px;
   margin-top: 0;
 }
-
 .top-desc {
   width: 40%;
 }
-
 .top-desc p {
   color: hsl(303, 10%, 53%);
   line-height: 26px;
   font-weight: 500;
 }
-
 h5 {
   color: hsl(300, 43%, 22%);
   font-size: 18px;
   margin: 0;
 }
-
 .all-ratings {
   width: 50%;
   display: flex;
   flex-direction: column;
 }
-
 .rating {
   display: flex;
   width: 80%;
@@ -69,13 +63,11 @@ h5 {
   border-radius: 10px;
   margin-bottom: 20px;
 }
-
 .review-body {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
-
 .review-rating{
   align-self: flex-start;
 }
@@ -84,4 +76,60 @@ h5 {
 }
 .best-rating{
   align-self: flex-end;
+}
+.top-bg-mob,
+.bottom-bg-mob {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .bottom-bg-desk,
+  .top-bg-desk {
+    display: none;
+  }
+  .top-bg-mob,
+  .bottom-bg-mob {
+    display: block;
+  }
+  .container {
+    width: 90%;
+    margin-top: 50px;
+  }
+  .section-one {
+    flex-direction: column;
+  }
+  .top-desc {
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 28px;
+    line-height: 28px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  .all-ratings {
+    width: 100%;
+    margin-top: 50px;
+  }
+  .rating {
+    width: 100%;
+    height: 80px;
+  }
+  .review-body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+  }
+  .review-rating{
+    align-self: center;
+  }
+  .best-rating{
+    align-self: center;
+  }
 }
