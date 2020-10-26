@@ -81,11 +81,29 @@ h5 {
 .bottom-bg-mob {
   display: none;
 }
+.section-two {
+  margin-top: 50px;
+}
 .card {
   background-color: hsl(300, 43%, 22%);
   width: 30%;
   padding: 30px 0;
   border-radius: 10px;
+  height: 176px;
+}
+.card-one {
+  align-self: flex-start;
+}
+.card-two {
+  align-self: center;
+}
+.card-three {
+  align-self: flex-end;
+}
+.card-holder {
+  height: 290px;
+  display: flex;
+  justify-content: space-between;
 }
 .card-content {
   color: white;
@@ -120,6 +138,9 @@ h5 {
 .content-text p {
   font-weight: 500;
   margin: 0;
+  margin-top: 30px;
+  line-height: 24px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
   .bottom-bg-desk,
@@ -171,5 +192,24 @@ h5 {
   }
   .best-rating{
     align-self: center;
+  }
+  .section-two {
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+  .card {
+    width: 100%;
+  }
+  .card-one {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .card-three {
+    align-self: center;
+    margin-top: 20px;
+  }
+  .card-holder {
+    height: auto;
+    flex-direction: column;
   }
 }
